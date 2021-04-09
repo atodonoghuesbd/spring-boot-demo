@@ -1,9 +1,7 @@
-package org.example.service;
+package org.example.api.service;
 
+import org.example.api.DemoApplication;
 import org.example.api.GreetingService;
-import org.example.api.service.HelloMarsService;
-import org.example.api.service.HelloWorldService;
-import org.example.demo.DemoApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +11,6 @@ public class HelloMarsServiceTests {
     private final GreetingService greetingService;
 
     @Autowired
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     HelloMarsServiceTests(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

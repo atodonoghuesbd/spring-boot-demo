@@ -1,4 +1,4 @@
-package org.example.demo.controller;
+package org.example.api.controller;
 
 import org.example.api.GreetingService;
 import org.example.api.service.configuration.DefaultConfiguration;
@@ -17,7 +17,6 @@ public class DemoController {
     private final GreetingService greetingService;
 
     @Autowired
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     DemoController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
