@@ -14,10 +14,13 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles({"extra-terrestrial"})
 public class ExtraTerrestrialTests {
     private final GreetingService greetingService;
+
     @Autowired
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     ExtraTerrestrialTests(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
+
     @Test
     public void extraTerrestrialProfile() {
         assert this.greetingService instanceof HelloMarsService;

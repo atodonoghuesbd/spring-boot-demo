@@ -11,14 +11,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(classes = {DemoApplication.class})
 public class HelloWorldServiceTests {
     private final GreetingService greetingService;
+
     @Autowired
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     HelloWorldServiceTests(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
+
     @Test
     void helloMarsServiceLoads() {
         assert this.greetingService instanceof HelloWorldService;
     }
+
     @Test
     void helloWorldServiceDoesNotLoad() {
         assert !(this.greetingService instanceof HelloMarsService);

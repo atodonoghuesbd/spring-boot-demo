@@ -17,6 +17,7 @@ public class DemoController {
     private final GreetingService greetingService;
 
     @Autowired
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     DemoController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
