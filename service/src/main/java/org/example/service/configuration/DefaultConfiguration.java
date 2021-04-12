@@ -1,9 +1,10 @@
-package org.example.api.service.configuration;
+package org.example.service.configuration;
 
 import org.example.api.GreetingService;
-import org.example.api.service.HelloMarsService;
-import org.example.api.service.HelloWorldService;
+import org.example.service.HelloMarsService;
+import org.example.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,6 +16,7 @@ public class DefaultConfiguration {
     public String planet;
 
     @Bean
+    @ConditionalOnMissingBean
     public GreetingService greetingService() {
         return MARS.equals(planet) ? new HelloMarsService() : new HelloWorldService();
     }

@@ -1,4 +1,4 @@
-package org.example.api.service;
+package org.example.service;
 
 import org.example.api.GreetingService;
 
