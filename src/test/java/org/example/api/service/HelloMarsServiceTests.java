@@ -2,6 +2,8 @@ package org.example.api.service;
 
 import org.example.api.DemoApplication;
 import org.example.api.GreetingService;
+import org.example.service.HelloMarsService;
+import org.example.service.HelloWorldService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
