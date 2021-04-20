@@ -22,7 +22,7 @@ public class DefaultConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public GreetingService greetingService() {
-        switch(planet) {
+        switch (planet) {
             case MARS:
                 return new HelloMarsService();
             case JUPITER:
